@@ -1,14 +1,16 @@
-# Title
+# Photo gallery
 
-Title
+Coming soon.
 
 ## Demo
 
-Link
+Coming soon.
 
-## Author
+## Authors
 
-Xurxe Toivo García
+- Mirela Viitanen
+- Simon Maher
+- Xurxe Toivo García
 
 ## License
 
@@ -16,4 +18,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-Sentence
+Everyone at [Integrify](https://github.com/Integrify-Finland), especially our teacher and classmates.
