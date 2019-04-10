@@ -5,6 +5,8 @@ const moreButton = document.querySelector('.more-button')
 // Add event listener for all buttons
 previousButton.addEventListener('click', function () { })
 nextButton.addEventListener('click', function () { })
+
+// Function that hides and displays the 'more info' section
 moreButton.addEventListener('click', function () {
     if (clickState === 0) {
         document.querySelector('.more-info-div').style.display = 'block'
@@ -39,31 +41,32 @@ const motivationSpan = document.querySelector('.motivation-span')
 // ====
 const quoteP = document.querySelector('.quote-p')
 let clickState = 0;
+let index = 0;
 // console.log(studentInfo)
 // console.log(studentInfo[0])
 // =======================================================================================
-function generateStudent(object) {
-    const name = object.firstName + '' + object.lastName;
+function generateStudent(i) {
+    const name = studentInfo[i].firstName + '' + studentInfo[i].lastName;
     nameP.innerHTML = name;
 
-    const title = object.title;
+    const title = studentInfo[i].title;
     titleP.innerHTML = title;
 
-    const nationality = object.nationality;
+    const nationality = studentInfo[i].nationality;
     nationalitySpan.innerHTML = nationality;
 
-    const skills = object.skills
-    skillsSpan.innerHTML = skills;
+    const skills = studentInfo[i].skills
+    skillsSpan.innerHTML = skills.join(', ');
 
-    src = './assets/' + object.src;
+    src = './assets/' + studentInfo[i].src;
     imageImg.src = src;
 
-    const vision = object.longTermVision;
+    const vision = studentInfo[i].longTermVision;
     visionSpan.innerHTML = vision
 
-    const motivation = object.motivatesMe;
+    const motivation = studentInfo[i].motivatesMe;
     motivationSpan.innerHTML = motivation
-    const quote = object.favoriteQuote;
+    const quote = studentInfo[i].favoriteQuote;
     quoteP.innerHTML = quote;
 
     console.log(name, title);
@@ -73,7 +76,13 @@ function generateStudent(object) {
 
 
 function initialize() {
-    generateStudent(studentInfo[0]);
+    generateStudent(index)
+    for (let i = 0; i < studentInfo.length; i++) {
+        if (i = studentInfo.length) {
+            index = 0
+        }
+    };
+    console.log(studentInfo[5])
 }
 
 initialize();
