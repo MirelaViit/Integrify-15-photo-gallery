@@ -1,17 +1,17 @@
-/* GENERAL *************************************************************************************************** */
+/* GENERAL **************************************************************** */
 
 * {
     box-sizing: border-box;
     font-family: sans-serif;
-    margin: 0;
-    padding: 0;
+/*     margin: 0;
+    padding: 0; */
     scroll-behavior: smooth;
     text-decoration: none;
 }
 
 
 
-/* TYPOGRAPHY ************************************************************************************************ */
+/* TYPOGRAPHY ************************************************************* */
 
 html {
     font-size: 20px;
@@ -27,3 +27,31 @@ html {
         font-size: 16px;
     }
 }
+
+.quote-p {
+    font-style: italic;
+}
+
+/* .white-text {
+    color: white;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -o-font-smoothing: antialiased;
+} */
+
+
+/* HEADER ***************************************************************** */
+
+
+
+/* MAIN ******************************************************************* */
+.image-div {
+    width: 39.91vh;
+    height: 50vh;
+    border: 1px solid black;
+}
+
+
+/* FOOTER ***************************************************************** */
