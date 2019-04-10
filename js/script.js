@@ -5,7 +5,15 @@ const moreButton = document.querySelector('.more-button')
 // Add event listener for all buttons
 previousButton.addEventListener('click', function () { })
 nextButton.addEventListener('click', function () { })
-moreButton.addEventListener('click', function () { })
+moreButton.addEventListener('click', function () {
+    if (clickState === 0) {
+        document.querySelector('.more-info-div').style.display = 'block'
+        clickState = 1
+    } else {
+        document.querySelector('.more-info-div').style.display = 'none'
+        clickState = 0
+    }
+})
 // Add const (delete later if not needed)
 const imageDiv = document.querySelector('.image-div')
 const imageImg = document.querySelector('.image-img')
@@ -30,10 +38,10 @@ const motivationP = document.querySelector('.motivation-p')
 const motivationSpan = document.querySelector('.motivation-span')
 // ====
 const quoteP = document.querySelector('.quote-p')
-
+let clickState = 0;
 // console.log(studentInfo)
 // console.log(studentInfo[0])
-
+// =======================================================================================
 function generateStudent(object) {
     const name = object.firstName + '' + object.lastName;
     nameP.innerHTML = name;
