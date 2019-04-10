@@ -2,11 +2,16 @@
 
 * {
     box-sizing: border-box;
-    font-family: sans-serif;
-/*     margin: 0;
-    padding: 0; */
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
     scroll-behavior: smooth;
     text-decoration: none;
+}
+
+body {
+    background: #FBB503;
 }
 
 
@@ -14,10 +19,10 @@
 /* TYPOGRAPHY ************************************************************* */
 
 html {
-    font-size: 20px;
+    font-size: 18px;
 }
 
-@media only screen and (min-width: 600px) and (max-width: 900px) {
+/* @media only screen and (min-width: 600px) and (max-width: 900px) {
     html {
         font-size: calc(16px + (20 - 16) * (100vw - 600px) / (900 - 600));    }
 }
@@ -26,24 +31,40 @@ html {
     html {
         font-size: 16px;
     }
-}
+} */
 
 .quote-p {
     font-style: italic;
 }
 
-/* .white-text {
+.white-text {
     color: white;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -o-font-smoothing: antialiased;
-} */
+}
 
 
 /* HEADER ***************************************************************** */
+header {
+    background: black;
+    display: flex;
+    align-items: baseline;
+    padding: 2rem;
+}
 
+h1 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 6rem;
+    text-align: center;
+}
+
+h2 {
+    color: #FBB503;
+    text-align: center;
+}
 
 
 /* MAIN ******************************************************************* */
@@ -51,6 +72,22 @@ html {
     width: 39.91vh;
     height: 50vh;
     border: 1px solid black;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.previous-button, .next-button {
+    align-self: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 3rem;
+    height: 3rem;
+    width: 3rem;
 }
 
 
