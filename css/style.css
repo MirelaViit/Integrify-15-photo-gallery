@@ -16,6 +16,11 @@ body {
 }
 
 
+<<<<<<< HEAD
+=======
+
+/* TYPOGRAPHY ************************************************************* */
+>>>>>>> 354277d8c55b6792866d45837a7611e1684ab6fe
 
 
 /* TYPOGRAPHY ************************************************************* */
@@ -70,7 +75,11 @@ h2 {
 
 /* MAIN ******************************************************************* */
 .image-div {
+<<<<<<< HEAD
     width: 50vh;
+=======
+    width: 40vh;
+>>>>>>> 354277d8c55b6792866d45837a7611e1684ab6fe
     height: 50vh;
     border: 20px solid white;
     background: white;
@@ -114,6 +123,10 @@ main {
 .more-button:focus .fas, 
 .more-button:hover .fas {
     color: black;
+}
+
+img {
+    width: 100%;
 }
 
 
