@@ -3,8 +3,23 @@ const nextButton = document.querySelector('.next-button')
 const moreButton = document.querySelector('.more-button')
 // ====
 // Add event listener for all buttons
-previousButton.addEventListener('click', function () { })
-nextButton.addEventListener('click', function () { })
+previousButton.addEventListener('click', function () {
+    index -= 1;
+    if (index < 0) {
+        index = studentInfo.length - 1;
+    }
+    generateStudent(index)
+    return;
+})
+nextButton.addEventListener('click', function () {
+    index += 1;
+    if (index === studentInfo.length) {
+        index = 0;
+
+    }
+    generateStudent(index)
+    return;
+})
 
 // Function that hides and displays the 'more info' section
 moreButton.addEventListener('click', function () {

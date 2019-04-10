@@ -27,6 +27,20 @@ const studentInfo = [{
     joinedOn: 'January 2019'
 },
 {
+    firstName: 'Simon ',
+    lastName: 'Maher',
+    title: 'Junior Web Developer',
+    nationality: 'British',
+    src: 'simon.jpg',
+    alt: 'simon',
+    skills: ['Javascript', 'CSS', 'HTML'],
+    whySofterDeveloper: 'To delve into a new and exciting career',
+    longTermVision: 'To enter into the Cyber Securiy field ',
+    motivatesMe: 'loads of Quids',
+    favoriteQuote: 'show me the money',
+    joinedOn: '21.01.2019'
+},
+{
     firstName: 'Sherry',
     lastName: 'Kaboli',
     title: 'Junior Frontend Developer',
