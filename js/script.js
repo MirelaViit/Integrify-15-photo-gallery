@@ -71,13 +71,13 @@ function generateStudent(i) {
     else {
         moreButton.style.display = "block";
     }
-
+  
     const nationality = studentInfo[i].nationality;
     nationalitySpan.innerHTML = nationality;
 
     const skills = studentInfo[i].skills;
     skillsSpan.innerHTML = skills.join(', ');
-
+  
     const drive = studentInfo[i].whySoftwareDeveloper;
     driveSpan.innerHTML = drive;
 
