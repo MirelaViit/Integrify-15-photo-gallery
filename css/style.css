@@ -1,29 +1,153 @@
-/* GENERAL *************************************************************************************************** */
+/* GENERAL **************************************************************** */
 
 * {
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     margin: 0;
+    outline: none;
     padding: 0;
     scroll-behavior: smooth;
     text-decoration: none;
 }
 
+body {
+    background: #FBB503;
+}
 
 
-/* TYPOGRAPHY ************************************************************************************************ */
+
+/* TYPOGRAPHY ************************************************************* */
 
 html {
-    font-size: 20px;
+    font-size: 18px;
 }
 
-@media only screen and (min-width: 600px) and (max-width: 900px) {
-    html {
-        font-size: calc(16px + (20 - 16) * (100vw - 600px) / (900 - 600));    }
+.white-text {
+    color: white;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -o-font-smoothing: antialiased;
 }
 
-@media only screen and (max-width: 600px) {
-    html {
-        font-size: 16px;
+
+/* HEADER ***************************************************************** */
+header {
+    align-items: baseline;
+    background: black;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 4rem 2rem;
+}
+
+h1 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 6rem;
+}
+
+h2 {
+    color: #FBB503;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+
+/* MAIN ******************************************************************* */
+main {
+    align-items: start;
+    display: grid;
+    grid-template-columns: 3rem auto 3rem;
+    grid-gap: 3rem;
+    padding: 2rem;
+}
+
+.current-student-div {
+    display: grid;
+    grid-template-columns: 18rem auto;
+    grid-gap: 3rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .current-student-div {
+        grid-template-columns: auto;
+        grid-template-rows: 18rem auto;
+        grid-auto-flow: column;
     }
+}
+
+.image-div {
+    width: 18rem;
+    height: 18rem;
+    border: 20px solid white;
+    background: #FBB503;
+}
+
+img {
+    width: 100%;
+}
+
+.previous-button, 
+.next-button {
+    border: none;
+    background: none;
+    color: black;
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+.previous-button:focus .fas, 
+.previous-button:hover .fas, 
+.next-button:focus .fas,
+.next-button:hover .fas {
+    color: white;
+}
+
+.more-button {
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 1rem 0; 
+}
+
+.more-button:focus .fas, 
+.more-button:hover .fas {
+    color: black;
+}
+
+.name-p {
+    font-family: 'Abril Fatface', serif;
+    font-size: 2rem;
+}
+
+.more-info-div p {
+    font-weight: 900;
+    padding-bottom: 0.3rem;
+}
+
+.quote-p {
+    color: #4b3600;
+    font-style: italic;
+    font-weight: 400;
+}
+
+
+
+
+/* FOOTER ***************************************************************** */
+
+footer {
+    text-align: center;
+}
+
+footer a {
+    color: #4b3600;
+    font-size: 0.8rem;
+}
+
+footer a:hover, footer a:focus {
+    color: black;
 }
