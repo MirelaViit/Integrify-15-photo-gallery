@@ -1,5 +1,14 @@
-const studentInfo = [{
-    firstName: 'Evans ',
+const studentInfo = [
+    {
+        firstName: 'Asabeneh',
+        lastName: 'Yetayeh',
+        title: 'Teacher',
+        src: 'asabeneh.jpg',
+        alt: 'Asabeneh Yetayeh',
+    },
+    
+    {
+    firstName: 'Evans',
     lastName: 'Chaba',
     title: 'Junior Web Developer',
     nationality: 'Kenyan',
@@ -27,7 +36,7 @@ const studentInfo = [{
     joinedOn: '21.01.2019'
 },
 {
-    firstName: 'Simon ',
+    firstName: 'Simon',
     lastName: 'Maher',
     title: 'Junior Web Developer',
     nationality: 'British',
@@ -41,7 +50,7 @@ const studentInfo = [{
     joinedOn: '21.01.2019'
 },
 {
-    firstName: 'Sherry ',
+    firstName: 'Sherry',
     lastName: 'Kaboli',
     title: 'Junior Frontend Developer',
     nationality: 'Iranian',
@@ -55,7 +64,7 @@ const studentInfo = [{
     joinedOn: '21.01.2019'
 },
 {
-    firstName: 'Julia ',
+    firstName: 'Julia',
     lastName: 'Shumeyko',
     title: 'Junior Web Developer',
     nationality: 'Russian',
@@ -69,7 +78,7 @@ const studentInfo = [{
     joinedOn: '21.01.2019'
 },
 {
-    firstName: 'André ',
+    firstName: 'André',
     lastName: 'Vollrath',
     title: 'Junior Web Developer',
     nationality: 'German',
@@ -97,7 +106,7 @@ const studentInfo = [{
     joinedOn: '21.01.2019'
 },
 {
-    firstName: 'Dean ',
+    firstName: 'Dean',
     lastName: 'Phan',
     title: 'Junior Web Developer',
     nationality: 'Vietnamese',
@@ -111,7 +120,7 @@ const studentInfo = [{
     joinedOn: '21.01.2019'
 },
 {
-    firstName: 'Phuc ',
+    firstName: 'Phuc',
     lastName: 'Nguyen',
     title: 'Junior Web Developer',
     nationality: 'Vietnamese',
@@ -125,7 +134,7 @@ const studentInfo = [{
     joinedOn: '21.01.2019'
 },
 {
-    firstName: 'Johanna ',
+    firstName: 'Johanna',
     lastName: 'Rousi',
     title: 'Junior Web Developer',
     nationality: 'Finnish',
@@ -139,7 +148,7 @@ const studentInfo = [{
     joinedOn: '21.01.2019'
 },
 {
-    firstName: 'Alba ',
+    firstName: 'Alba',
     lastName: 'Vrapi',
     title: 'Junior Web Developer',
     nationality: 'Albanian',
@@ -154,7 +163,7 @@ const studentInfo = [{
 },
 
 {
-    firstName: 'Adrien ',
+    firstName: 'Adrien',
     lastName: 'Fernandez',
     title: 'Junior Web Developer',
     nationality: 'French',
@@ -169,7 +178,7 @@ const studentInfo = [{
 },
 
 {
-    firstName: 'Koray ',
+    firstName: 'Koray',
     lastName: 'Dündar',
     title: 'Junior Web Developer',
     nationality: 'Turkish',
@@ -183,7 +192,7 @@ const studentInfo = [{
     joinedOn: '21.01.2019'
 },
 {
-    firstName: 'Hari ',
+    firstName: 'Hari',
     lastName: 'Basnet',
     title: 'Junior Web Developer',
     nationality: 'Nepalese',
@@ -197,7 +206,7 @@ const studentInfo = [{
     joinedOn: '21.01.2019'
 },
 {
-    firstName: 'Mostafa ',
+    firstName: 'Mostafa',
     lastName: 'Hazareh',
     title: 'Junior Web Developer',
     nationality: 'Afghan',
@@ -211,7 +220,7 @@ const studentInfo = [{
     joinedOn: '21.01.2019'
 },
 {
-    firstName: 'Ernest ',
+    firstName: 'Ernest',
     lastName: 'Cherry',
     title: 'Junior Developer @Integrify',
     nationality: 'Saint Lucian',
@@ -225,7 +234,7 @@ const studentInfo = [{
     joinedOn: '21.01.2019'
 },
 {
-    firstName: 'Muhammad Husham ',
+    firstName: 'Muhammad Husham',
     lastName: 'Yousaf',
     title: 'Junior Web Developer',
     nationality: 'Pakistani',
@@ -240,7 +249,7 @@ const studentInfo = [{
 },
 
 {
-    firstName: 'Mirela ',
+    firstName: 'Mirela',
     lastName: 'Viitanen',
     title: 'Junior Web Developer',
     nationality: 'Croatian',
@@ -254,7 +263,7 @@ const studentInfo = [{
     joinedOn: '21-1-2019'
 },
 {
-    firstName: 'Sulaymon ',
+    firstName: 'Sulaymon',
     lastName: 'Tajudeen',
     title: 'Web developer',
     nationality: 'Nigerian',
@@ -268,7 +277,7 @@ const studentInfo = [{
     joinedOn: '21.01.2019'
 },
 {
-    firstName: 'Sooyeon ',
+    firstName: 'Sooyeon',
     lastName: 'Choi',
     title: 'Junior Web Developer',
     nationality: 'South Korean',
@@ -280,8 +289,9 @@ const studentInfo = [{
     motivatesMe: 'People.',
     favoriteQuote: '"Sow a thought and you reap an action; sow an act and you reap a habit; sow a habit and you reap a character; sow a character and you reap a destiny."',
     joinedOn: '21.01.2019'
-}, {
-    firstName: 'Garland ',
+}, 
+{
+    firstName: 'Garland',
     lastName: 'Rajasalan',
     title: 'Junior developer',
     nationality: 'Indian',
