@@ -40,6 +40,20 @@ let index = 0;
 // update fields based on current index
 function generateStudent(i) {
 
+    // get file name from object in array
+    src = studentInfo[i].src;
+    // if no file name, don't display image
+    if (src === "") {
+        imageImg.style.display = "none";
+        imageDiv.style.background = "#FBB503";
+    }
+    // otherwise, display image and generate src
+    else {
+        imageImg.style.display = "block";
+        imageDiv.style.background = "white";
+        imageImg.src = './assets/' + src;
+    };
+
     // get name from object in array
     const name = studentInfo[i].firstName + ' ' + studentInfo[i].lastName;
     // set as inner HTML
@@ -48,23 +62,21 @@ function generateStudent(i) {
     const title = studentInfo[i].title;
     titleP.innerHTML = title;
 
+    // if teacher, do not show more (only name and title available)
+    if (i === 0) {
+        moreButton.style.display = "none";
+        return;
+    }
+
+    else {
+        moreButton.style.display = "block";
+    }
+
     const nationality = studentInfo[i].nationality;
     nationalitySpan.innerHTML = nationality;
 
     const skills = studentInfo[i].skills;
     skillsSpan.innerHTML = skills.join(', ');
-
-    // get file name from object in array
-    src = studentInfo[i].src;
-    // if no file name, don't display image
-    if (src === "") {
-        imageImg.style.display = "none";
-    }
-    // otherwise, display image and generate src
-    else {
-        imageImg.style.display = "block";
-        imageImg.src = './assets/' + src;
-    };
 
     const drive = studentInfo[i].whySoftwareDeveloper;
     driveSpan.innerHTML = drive;
