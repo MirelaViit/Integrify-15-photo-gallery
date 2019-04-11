@@ -20,7 +20,7 @@ body {
 /* TYPOGRAPHY ************************************************************* */
 
 html {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .white-text {
@@ -35,19 +35,19 @@ html {
 
 /* HEADER ***************************************************************** */
 header {
-    align-items: baseline;
     background: black;
-    display: flex;
-    justify-content: center;
     padding: 1rem 4rem 2rem;
+    text-align: center;
 }
 
 h1 {
+    display: inline-block;
     font-family: 'Abril Fatface', serif;
     font-size: 6rem;
 }
 
 h2 {
+    display: inline-block;
     color: #FBB503;
     font-size: 2rem;
     padding-left: 2rem;
@@ -59,35 +59,57 @@ main {
     align-items: start;
     display: grid;
     grid-template-columns: 3rem auto 3rem;
-    grid-gap: 3rem;
+    grid-gap: 2rem;
     padding: 2rem;
 }
 
 .current-student-div {
     display: grid;
-    grid-template-columns: 18rem auto;
-    grid-gap: 3rem;
+    grid-template-columns: 340px auto;
+    grid-column-gap: 2rem;
+    grid-row-gap: 1rem;
+    align-self: center;
 }
 
-@media only screen and (max-width: 800px) {
-    .current-student-div {
-        grid-template-columns: auto;
-        grid-template-rows: 18rem auto;
-        grid-auto-flow: column;
-    }
+.info-div {
+    min-height: 180px;
 }
 
 .image-div {
-    width: 18rem;
-    height: 18rem;
+    width: 340px;
+    height: 340px;
     border: 20px solid white;
-    background: #FBB503;
+    background: white;
 }
 
 img {
     width: 100%;
 }
 
+.name-p {
+    font-family: 'Abril Fatface', serif;
+    font-size: 3rem;
+    padding-bottom: 1rem;
+}
+
+.more-info-div p {
+    font-weight: 900;
+    padding-bottom: 0 0 0.3rem;
+}
+
+.more-info-div span {
+    color: #4b3600;
+}
+
+.quote-p {
+    color: #4b3600;
+    font-style: italic;
+    font-weight: 400;
+    padding: 1rem 0;
+}
+
+
+/* BUTTONS **************************************************************** */
 .previous-button, 
 .next-button {
     border: none;
@@ -118,29 +140,11 @@ img {
     color: black;
 }
 
-.name-p {
-    font-family: 'Abril Fatface', serif;
-    font-size: 2rem;
-}
-
-.more-info-div p {
-    font-weight: 900;
-    padding-bottom: 0.3rem;
-}
-
-.quote-p {
-    color: #4b3600;
-    font-style: italic;
-    font-weight: 400;
-}
-
-
-
-
 /* FOOTER ***************************************************************** */
 
 footer {
     text-align: center;
+    padding: 1rem 2rem 2rem;
 }
 
 footer a {
@@ -151,3 +155,85 @@ footer a {
 footer a:hover, footer a:focus {
     color: black;
 }
+
+
+/* MEDIA QUERIES ***************************************************************** */
+
+@media only screen and (max-width: 900px) {
+    .current-student-div {
+        grid-template-columns: 200px;
+        grid-template-rows: auto auto;
+        grid-auto-flow: column;
+        justify-self: center;
+    }
+
+    .image-div {
+        justify-self: center;
+        border: 20px solid white;
+        background: white;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    h1 {
+        font-size: calc(48px + (96 - 48) * (100vw - 600px) / (900 - 600));
+    }
+
+    h2 {
+        font-size: calc(16px + (32 - 16) * (100vw - 600px) / (900 - 600));
+    }
+
+    main {
+        grid-gap: calc(16px + (32 - 16) * (100vw - 600px) / (900 - 600));
+        padding: calc(16px + (32 - 16) * (100vw - 600px) / (900 - 600));
+    }
+
+    .name-p {
+        font-size: calc(32px + (48 - 32) * (100vw - 600px) / (900 - 600));
+    }
+
+    .image-div {
+        width: calc(200px + (340 - 200) * (100vw - 600px) / (900 - 600));
+        height: calc(200px + (340 - 200) * (100vw - 600px) / (900 - 600));
+        border: calc(10px + (20 - 10) * (100vw - 600px) / (900 - 600)) solid white;
+    }
+
+    .previous-button, 
+    .next-button {
+        font-size: calc(32px + (48 - 32) * (100vw - 600px) / (900 - 600));
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    main {
+        grid-gap: 1rem;
+        padding: 1rem;
+    }
+
+    .name-p {
+        font-size: 2rem;
+    }
+
+    .image-div {
+        width: 200px;
+        height: 200px;
+        border: 10px solid white;
+    }
+
+    .previous-button, 
+    .next-button {
+        font-size: 2rem;
+    }
+
+    
+}
+
