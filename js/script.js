@@ -42,16 +42,16 @@ function generateStudent(i) {
 
     // get file name from object in array
     src = studentInfo[i].src;
+    alt = studentInfo[i].alt;
     // if no file name, don't display image
     if (src === "") {
         imageImg.style.display = "none";
-        imageDiv.style.background ="#FBB503";
     }
     // otherwise, display image and generate src
     else {
         imageImg.style.display = "block";
-        imageDiv.style.background ="white";
         imageImg.src = './assets/' + src;
+        imageImg.alt = 'Portrait of ' + alt;
     };
 
     // get name from object in array
