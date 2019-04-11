@@ -3,7 +3,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    font-weight: normal;
+    font-weight: 400;
     margin: 0;
     outline: none;
     padding: 0;
@@ -20,10 +20,6 @@ body {
 
 html {
     font-size: 18px;
-}
-
-.quote-p {
-    font-style: italic;
 }
 
 .white-text {
@@ -56,37 +52,43 @@ h2 {
     padding-left: 2rem;
 }
 
-.name-p {
-    font-family: 'Abril Fatface', serif;
-    font-size: 2rem;
-}
-
-.more-info-div p {
-    font-weight: bold;
-}
-
 
 /* MAIN ******************************************************************* */
+main {
+    align-items: start;
+    display: grid;
+    grid-template-columns: 3rem auto 3rem;
+    grid-gap: 3rem;
+    padding: 2rem;
+}
+
+.current-student-div {
+    display: grid;
+    grid-template-columns: 18rem auto;
+    grid-gap: 3rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .current-student-div {
+        grid-template-columns: auto;
+        grid-template-rows: 18rem auto;
+        grid-auto-flow: column;
+    }
+}
+
 .image-div {
-    width: 50vh;
-    height: 50vh;
+    width: 18rem;
+    height: 18rem;
     border: 20px solid white;
-    background: white;
+    background: #FBB503;
 }
 
 img {
     width: 100%;
 }
 
-main {
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem;
-}
-
 .previous-button, 
 .next-button {
-    align-self: center;
     border: none;
     background: none;
     color: black;
@@ -107,6 +109,7 @@ main {
     color: white;
     cursor: pointer;
     font-size: 2rem;
+    padding: 1rem 0; 
 }
 
 .more-button:focus .fas, 
@@ -114,9 +117,36 @@ main {
     color: black;
 }
 
-img {
-    width: 100%;
+.name-p {
+    font-family: 'Abril Fatface', serif;
+    font-size: 2rem;
+}
+
+.more-info-div p {
+    font-weight: 900;
+    padding-bottom: 0.3rem;
+}
+
+.quote-p {
+    color: #4b3600;
+    font-style: italic;
+    font-weight: 400;
 }
 
 
+
+
 /* FOOTER ***************************************************************** */
+
+footer {
+    text-align: center;
+}
+
+footer a {
+    color: #4b3600;
+    font-size: 0.8rem;
+}
+
+footer a:hover, footer a:focus {
+    color: black;
+}
