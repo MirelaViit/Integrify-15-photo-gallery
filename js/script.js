@@ -43,6 +43,7 @@ function generateStudent(i) {
     // get name from object in array
     const name = studentInfo[i].firstName + ' ' + studentInfo[i].lastName;
     // set as inner HTML
+
     nameP.innerHTML = name;
 
     const title = studentInfo[i].title;
@@ -145,6 +146,7 @@ function initialize() {
     displayMore();
 
     generateStudent(index);
+
 }
 
 initialize();
