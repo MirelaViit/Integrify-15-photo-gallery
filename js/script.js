@@ -12,6 +12,7 @@ previousButton.addEventListener('click', function () {
     return;
 })
 nextButton.addEventListener('click', function () {
+    clickState = 0;
     index += 1;
     if (index === studentInfo.length) {
         index = 0;
@@ -24,10 +25,10 @@ nextButton.addEventListener('click', function () {
 // Function that hides and displays the 'more info' section
 moreButton.addEventListener('click', function () {
     if (clickState === 0) {
-        document.querySelector('.more-info-div').style.display = 'block'
+        document.querySelector('.more-info-div').style.display = 'none'
         clickState = 1
     } else {
-        document.querySelector('.more-info-div').style.display = 'none'
+        document.querySelector('.more-info-div').style.display = 'block'
         clickState = 0
     }
 })
@@ -61,6 +62,8 @@ let index = 0;
 // console.log(studentInfo[0])
 // =======================================================================================
 function generateStudent(i) {
+
+    clickState = 0;
     const name = studentInfo[i].firstName + '' + studentInfo[i].lastName;
     nameP.innerHTML = name;
 
@@ -91,6 +94,7 @@ function generateStudent(i) {
 
 
 function initialize() {
+    clickState = 0;
     generateStudent(index)
     for (let i = 0; i < studentInfo.length; i++) {
         if (i = studentInfo.length) {
