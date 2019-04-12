@@ -26,6 +26,9 @@ body {
     overflow: hidden !important;
 }
 
+
+
+
 /* TYPOGRAPHY ************************************************************* */
 
 html {
@@ -40,6 +43,7 @@ html {
     -moz-osx-font-smoothing: grayscale;
     -o-font-smoothing: antialiased;
 }
+
 
 
 /* HEADER ***************************************************************** */
@@ -98,7 +102,6 @@ img {
 .name-dd {
     font-family: 'Abril Fatface', serif;
     font-size: 3rem;
-    padding-bottom: 1rem;
 }
 
 .more-info-dl dt {
@@ -146,7 +149,7 @@ img {
     color: white;
     cursor: pointer;
     font-size: 2rem;
-    padding: 1rem 0; 
+    padding: 0 0 1rem; 
 }
 
 .more-button:hover .fas {
@@ -156,6 +159,8 @@ img {
 .more-button:focus .fas {
     color: #fdda81;
 }
+
+
 
 /* FOOTER ***************************************************************** */
 
