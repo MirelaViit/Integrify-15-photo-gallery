@@ -75,7 +75,7 @@ main {
     min-height: 180px;
 }
 
-.image-div {
+.photo-div {
     width: 340px;
     height: 340px;
     border: 20px solid white;
@@ -92,21 +92,26 @@ img {
     padding-bottom: 1rem;
 }
 
-.more-info-div p {
+dt {
     font-weight: 900;
-    padding-bottom: 0 0 0.3rem;
+    display: inline-block;
 }
 
-.more-info-div span {
+dd {
     color: #4b3600;
+    display: inline-block;
 }
 
-.quote-p {
-    color: #4b3600;
+.dl-div {
+    padding: 0 0 0.3rem;
+}
+
+.quote-dd {
     font-style: italic;
     font-weight: 400;
     padding: 1rem 0;
 }
+
 
 
 /* BUTTONS **************************************************************** */
@@ -173,7 +178,7 @@ footer a:hover, footer a:focus {
         justify-self: center;
     }
 
-    .image-div {
+    .photo-div {
         justify-self: center;
         border: 20px solid white;
         background: white;
@@ -198,7 +203,7 @@ footer a:hover, footer a:focus {
         font-size: calc(32px + (48 - 32) * (100vw - 600px) / (900 - 600));
     }
 
-    .image-div {
+    .photo-div {
         width: calc(200px + (340 - 200) * (100vw - 600px) / (900 - 600));
         height: calc(200px + (340 - 200) * (100vw - 600px) / (900 - 600));
         border: calc(10px + (20 - 10) * (100vw - 600px) / (900 - 600)) solid white;
@@ -229,7 +234,7 @@ footer a:hover, footer a:focus {
         font-size: 2rem;
     }
 
-    .image-div {
+    .photo-div {
         width: 200px;
         height: 200px;
         border: 10px solid white;
@@ -239,8 +244,4 @@ footer a:hover, footer a:focus {
     .next-button {
         font-size: 2rem;
     }
-}
-
-dt, dd {
-    display: inline-block;
 }

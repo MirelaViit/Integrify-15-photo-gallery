@@ -1,30 +1,30 @@
 /* GLOBAL VARIABLES ********************************************** */
 
-const imageDiv = document.querySelector('.image-div');
-const imageImg = document.querySelector('.image-img');
+const photoDiv = document.querySelector('.photo-div');
+const photoImg = document.querySelector('.photo-img');
 
 const defaultInfoDiv = document.querySelector('.default-info-div');
 const nameP = document.querySelector('.name-p');
 const titleP = document.querySelector('.title-p');
 
-const moreInfoDiv = document.querySelector('.more-info-div');
+const moreInfoDl = document.querySelector('.more-info-dl');
 
-const nationalityP = document.querySelector('.nationality-p');
-const nationalitySpan = document.querySelector('.nationality-span');
+const nationalityDt = document.querySelector('.nationality-dt');
+const nationalityDd = document.querySelector('.nationality-dd');
 
-const skillsP = document.querySelector('.skills-p');
-const skillsSpan = document.querySelector('.skills-span');
+const skillsDt = document.querySelector('.skills-dt');
+const skillsDd = document.querySelector('.skills-dd');
 
-const driveP = document.querySelector('.drive-p');
-const driveSpan = document.querySelector('.drive-span');
+const driveDt = document.querySelector('.drive-dt');
+const driveDd = document.querySelector('.drive-dd');
 
-const visionP = document.querySelector('vision-p');
-const visionSpan = document.querySelector('.vision-span');
+const visionDt = document.querySelector('vision-dt');
+const visionDd = document.querySelector('.vision-dd');
 
-const motivationP = document.querySelector('.motivation-p');
-const motivationSpan = document.querySelector('.motivation-span');
+const motivationDt = document.querySelector('.motivation-dt');
+const motivationDd = document.querySelector('.motivation-dd');
 
-const quoteP = document.querySelector('.quote-p');
+const quoteDd = document.querySelector('.quote-dd');
 
 const previousButton = document.querySelector('.previous-button');
 const nextButton = document.querySelector('.next-button');
@@ -42,16 +42,16 @@ function generateStudent(i) {
 
     // get file name from object in array
     src = studentInfo[i].src;
+    alt = studentInfo[i].alt;
     // if no file name, don't display image
     if (src === "") {
-        imageImg.style.display = "none";
-        imageDiv.style.background ="#FBB503";
+        photoImg.style.display = "none";
     }
     // otherwise, display image and generate src
     else {
-        imageImg.style.display = "block";
-        imageDiv.style.background ="white";
-        imageImg.src = './assets/' + src;
+        photoImg.style.display = "block";
+        photoImg.src = './assets/' + src;
+        photoImg.alt = 'Portrait of ' + alt;
     };
 
     // get name from object in array
@@ -73,22 +73,22 @@ function generateStudent(i) {
     }
   
     const nationality = studentInfo[i].nationality;
-    nationalitySpan.innerHTML = nationality;
+    nationalityDd.innerHTML = nationality;
 
     const skills = studentInfo[i].skills;
-    skillsSpan.innerHTML = skills.join(', ');
+    skillsDd.innerHTML = skills.join(', ');
   
     const drive = studentInfo[i].whySoftwareDeveloper;
-    driveSpan.innerHTML = drive;
+    driveDd.innerHTML = drive;
 
     const vision = studentInfo[i].longTermVision;
-    visionSpan.innerHTML = vision;
+    visionDd.innerHTML = vision;
 
     const motivation = studentInfo[i].motivatesMe;
-    motivationSpan.innerHTML = motivation;
+    motivationDd.innerHTML = motivation;
 
     const quote = studentInfo[i].favoriteQuote;
-    quoteP.innerHTML = quote;
+    quoteDd.innerHTML = quote;
 
     return;
 }
@@ -96,12 +96,12 @@ function generateStudent(i) {
 // when clicking moreButton, change clickState and update style accordingly
 function displayMore() {
     if (clickState === 0) {
-        document.querySelector('.more-info-div').style.display = 'none';
+        moreInfoDl.style.display = 'none';
         clickState = 1;
     }
 
     else {
-        document.querySelector('.more-info-div').style.display = 'block';
+        moreInfoDl.style.display = 'block';
         clickState = 0;
     }
 };
