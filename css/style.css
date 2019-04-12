@@ -119,11 +119,14 @@ img {
     font-size: 3rem;
 }
 
-.previous-button:focus .fas, 
 .previous-button:hover .fas, 
-.next-button:focus .fas,
 .next-button:hover .fas {
     color: white;
+}
+
+.previous-button:focus .fas, 
+.next-button:focus .fas {
+    color:    #7d5a01;
 }
 
 .more-button {
@@ -135,9 +138,12 @@ img {
     padding: 1rem 0; 
 }
 
-.more-button:focus .fas, 
 .more-button:hover .fas {
     color: black;
+}
+
+.more-button:focus .fas {
+    color: #fdda81;
 }
 
 /* FOOTER ***************************************************************** */
@@ -233,4 +239,8 @@ footer a:hover, footer a:focus {
     .next-button {
         font-size: 2rem;
     }
+}
+
+dt, dd {
+    display: inline-block;
 }
