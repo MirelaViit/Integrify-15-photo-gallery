@@ -135,7 +135,7 @@ nextButton.addEventListener('click', function () {
     };
 
     generateStudent(index);
-
+  
     return;
 })
 
