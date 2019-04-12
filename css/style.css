@@ -15,7 +15,16 @@ body {
     background: #FBB503;
 }
 
-
+.screen-reader-only {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px,1px,1px,1px);
+    clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+    -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+    overflow: hidden !important;
+}
 
 /* TYPOGRAPHY ************************************************************* */
 
@@ -75,7 +84,7 @@ main {
     min-height: 180px;
 }
 
-.image-div {
+.photo-div {
     width: 340px;
     height: 340px;
     border: 20px solid white;
@@ -86,27 +95,29 @@ img {
     width: 100%;
 }
 
-.name-p {
+.name-dd {
     font-family: 'Abril Fatface', serif;
     font-size: 3rem;
     padding-bottom: 1rem;
 }
 
-.more-info-div p {
+.more-info-dl dt {
     font-weight: 900;
-    padding-bottom: 0 0 0.3rem;
+    display: inline-block;
 }
 
-.more-info-div span {
+.more-info-dl dd {
     color: #4b3600;
+    display: inline-block;
+    padding-bottom: 0.3rem;
 }
 
-.quote-p {
-    color: #4b3600;
+.quote-dd {
     font-style: italic;
     font-weight: 400;
     padding: 1rem 0;
 }
+
 
 
 /* BUTTONS **************************************************************** */
@@ -119,11 +130,14 @@ img {
     font-size: 3rem;
 }
 
-.previous-button:focus .fas, 
 .previous-button:hover .fas, 
-.next-button:focus .fas,
 .next-button:hover .fas {
     color: white;
+}
+
+.previous-button:focus .fas, 
+.next-button:focus .fas {
+    color:    #7d5a01;
 }
 
 .more-button {
@@ -135,9 +149,12 @@ img {
     padding: 1rem 0; 
 }
 
-.more-button:focus .fas, 
 .more-button:hover .fas {
     color: black;
+}
+
+.more-button:focus .fas {
+    color: #fdda81;
 }
 
 /* FOOTER ***************************************************************** */
@@ -167,7 +184,7 @@ footer a:hover, footer a:focus {
         justify-self: center;
     }
 
-    .image-div {
+    .photo-div {
         justify-self: center;
         border: 20px solid white;
         background: white;
@@ -192,7 +209,7 @@ footer a:hover, footer a:focus {
         font-size: calc(32px + (48 - 32) * (100vw - 600px) / (900 - 600));
     }
 
-    .image-div {
+    .photo-div {
         width: calc(200px + (340 - 200) * (100vw - 600px) / (900 - 600));
         height: calc(200px + (340 - 200) * (100vw - 600px) / (900 - 600));
         border: calc(10px + (20 - 10) * (100vw - 600px) / (900 - 600)) solid white;
@@ -223,7 +240,7 @@ footer a:hover, footer a:focus {
         font-size: 2rem;
     }
 
-    .image-div {
+    .photo-div {
         width: 200px;
         height: 200px;
         border: 10px solid white;
