@@ -4,8 +4,8 @@ const photoDiv = document.querySelector('.photo-div');
 const photoImg = document.querySelector('.photo-img');
 
 const defaultInfoDiv = document.querySelector('.default-info-div');
-const nameP = document.querySelector('.name-p');
-const titleP = document.querySelector('.title-p');
+const nameDd = document.querySelector('.name-dd');
+const titleDd = document.querySelector('.title-dd');
 
 const moreInfoDl = document.querySelector('.more-info-dl');
 
@@ -57,10 +57,10 @@ function generateStudent(i) {
     // get name from object in array
     const name = studentInfo[i].firstName + ' ' + studentInfo[i].lastName;
     // set as inner HTML
-    nameP.innerHTML = name;
+    nameDd.innerHTML = name;
 
     const title = studentInfo[i].title;
-    titleP.innerHTML = title;
+    titleDd.innerHTML = title;
 
     // if teacher, do not show more (only name and title available)
     if (i === 0) {
@@ -138,7 +138,7 @@ nextButton.addEventListener('click', function () {
         index = 0;
 
     }
-    generateStudent(index)
+    generateStudent(index);
     return;
 })
 

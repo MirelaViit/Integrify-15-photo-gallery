@@ -50,8 +50,8 @@
         <h2>Class&nbsp;of&nbsp;January&nbsp;2019</h2>
     </header>
 
-    <main aria-live="polite" aria-atomic="false">
-        <button aria-label="previous" class="previous-button">
+    <main aria-live="polite" aria-atomic="true">
+        <button aria-label="Previous person" class="previous-button">
             <i class="fas fa-arrow-left"></i>
         </button>
 
@@ -62,54 +62,46 @@
     
             <div class="info-div">
                 <div class="default-info-div">
-                    <p class="name-p">
-                        Name
-                    </p>
-                    <p class="title-p">
-                        Title
-                    </p>
+                    <dt class="name-dt screen-reader-only">Name:</dt>
+                    <dd class="name-dd"></dd>
+
+                    <dt class="title-dt screen-reader-only">Title:</dt>
+                    <dd class="title-dd"></dd>
                 </div>
     
-                <button aria-label="more" class="more-button">
+                <button aria-label="More info" class="more-button">
                     <i class="fas fa-info-circle"></i>
                 </button>
     
                 <dl class="more-info-dl" aria-live="polite" aria-atomic="true">
-                    <div class="dl-div">
-                        <dt class="nationality-dt">Nationality:</dt>
-                        <dd class="nationality-dd">nationality</dd>
-                    </div>
+                    <dt class="nationality-dt">Nationality:</dt>
+                    <dd class="nationality-dd"></dd>
+                    <br />
 
-                    <div class="dl-div">
-                        <dt class="skills-dt">Skills:</dt>
-                        <dd class="skills-dd">skills</dd>
-                    </div>
+                    <dt class="skills-dt">Skills:</dt>
+                    <dd class="skills-dd"></dd>
+                    <br />
 
-                    <div class="dl-div">
-                        <dt class="drive-dt">My drive:</dt>
-                        <dd class="drive-dd">I want to be a software developer because...</dd>
-                    </div>
+                    <dt class="drive-dt">My drive:</dt>
+                    <dd class="drive-dd"></dd>
+                    <br />
 
-                    <div class="dl-div">
-                        <dt class="vision-dt">My vision: </dt>
-                        <dd class="vision-dd">...</dd>
-                    </div>
+                    <dt class="vision-dt">My vision: </dt>
+                    <dd class="vision-dd"></dd>
+                    <br />
 
-                    <div class="dl-div">
-                        <dt class="motivation-dt">My motivation:</dt>
-                        <dd class="motivation-dd">...</dd>
-                    </div>
+                    <dt class="motivation-dt">My motivation:</dt>
+                    <dd class="motivation-dd"></dd>
+                    <br />
 
-                    <div class="dl-div">
-                        <dt class="quote-dt" aria-label="Quote:"></dt>
-                        <dd class="quote-dd">"Profound quote"</dd>
-                    </div>
+                    <dt class="quote-dt screen-reader-only">Favorite quote:</dt>
+                    <dd class="quote-dd"></dd>
 
                 </dl>
             </div>
         </div>
 
-        <button  aria-label="next" class="next-button">
+        <button  aria-label="Next person" class="next-button">
             <i class="fas fa-arrow-right"></i>
         </button>
 
