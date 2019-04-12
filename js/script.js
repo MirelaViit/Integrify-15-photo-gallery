@@ -3,27 +3,15 @@
 const photoDiv = document.querySelector('.photo-div');
 const photoImg = document.querySelector('.photo-img');
 
-const defaultInfoDiv = document.querySelector('.default-info-div');
 const nameDd = document.querySelector('.name-dd');
 const titleDd = document.querySelector('.title-dd');
 
 const moreInfoDl = document.querySelector('.more-info-dl');
-
-const nationalityDt = document.querySelector('.nationality-dt');
 const nationalityDd = document.querySelector('.nationality-dd');
-
-const skillsDt = document.querySelector('.skills-dt');
 const skillsDd = document.querySelector('.skills-dd');
-
-const driveDt = document.querySelector('.drive-dt');
 const driveDd = document.querySelector('.drive-dd');
-
-const visionDt = document.querySelector('vision-dt');
 const visionDd = document.querySelector('.vision-dd');
-
-const motivationDt = document.querySelector('.motivation-dt');
 const motivationDd = document.querySelector('.motivation-dd');
-
 const quoteDd = document.querySelector('.quote-dd');
 
 const previousButton = document.querySelector('.previous-button');
@@ -43,10 +31,12 @@ function generateStudent(i) {
     // get file name from object in array
     src = studentInfo[i].src;
     alt = studentInfo[i].alt;
+
     // if no file name, don't display image
     if (src === "") {
         photoImg.style.display = "none";
     }
+
     // otherwise, display image and generate src
     else {
         photoImg.style.display = "block";
@@ -56,6 +46,7 @@ function generateStudent(i) {
 
     // get name from object in array
     const name = studentInfo[i].firstName + ' ' + studentInfo[i].lastName;
+
     // set as inner HTML
     nameDd.innerHTML = name;
 
@@ -70,13 +61,13 @@ function generateStudent(i) {
 
     else {
         moreButton.style.display = "block";
-    }
+    };
   
     const nationality = studentInfo[i].nationality;
     nationalityDd.innerHTML = nationality;
 
-    const skills = studentInfo[i].skills;
-    skillsDd.innerHTML = skills.join(', ');
+    const skills = studentInfo[i].skills.join(', ');
+    skillsDd.innerHTML = skills;
   
     const drive = studentInfo[i].whySoftwareDeveloper;
     driveDd.innerHTML = drive;
@@ -91,7 +82,7 @@ function generateStudent(i) {
     quoteDd.innerHTML = quote;
 
     return;
-}
+};
 
 // when clicking moreButton, change clickState and update style accordingly
 function displayMore() {
@@ -104,6 +95,8 @@ function displayMore() {
         moreInfoDl.style.display = 'block';
         clickState = 0;
     }
+
+    return;
 };
 
 
@@ -113,6 +106,7 @@ function displayMore() {
 previousButton.addEventListener('click', function () {
     // reset clickState
     clickState = 0;
+
     // run displayMore() 
     displayMore();
 
@@ -126,26 +120,31 @@ previousButton.addEventListener('click', function () {
 
     // generate student
     generateStudent(index);
+
     return;
-})
+});
 
 nextButton.addEventListener('click', function () {
     clickState = 0;
     displayMore();
 
     index += 1;
+
     if (index === studentInfo.length) {
         index = 0;
+    };
 
-    }
     generateStudent(index);
+
     return;
 })
 
 // Function that hides and displays the 'more info' section
 moreButton.addEventListener('click', function () {
     displayMore();
-})
+
+    return;
+});
 
 
 
@@ -155,9 +154,9 @@ moreButton.addEventListener('click', function () {
 function initialize() {
     clickState = 0;
     displayMore();
-
     generateStudent(index);
 
+    return; 
 }
 
 initialize();
