@@ -50,8 +50,8 @@
         <h2>Class&nbsp;of&nbsp;January&nbsp;2019</h2>
     </header>
 
-    <main>
-        <button class="previous-button">
+    <main aria-live="polite" aria-atomic="false">
+        <button aria-label="previous" class="previous-button">
             <i class="fas fa-arrow-left"></i>
         </button>
 
@@ -70,11 +70,11 @@
                     </p>
                 </div>
     
-                <button class="more-button">
+                <button aria-label="more" class="more-button">
                     <i class="fas fa-info-circle"></i>
                 </button>
     
-                <div class="more-info-div">
+                <div class="more-info-div" aria-live="polite" aria-atomic="true">
                     <p class="nationality-p">
                         Nationality: <span class="nationality-span">nationality</span>
                     </p>
@@ -100,7 +100,7 @@
             </div>
         </div>
 
-        <button class="next-button">
+        <button  aria-label="next" class="next-button">
             <i class="fas fa-arrow-right"></i>
         </button>
 
